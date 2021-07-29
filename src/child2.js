@@ -1,8 +1,6 @@
 import { useReducer } from "react"
 
-
-
-export const Child2 = () => {
+const Child2 = () => {
 
     const reducer = (state, action) => {
         switch (action.type){
@@ -20,3 +18,4 @@ export const Child2 = () => {
         </>
     )
 }
+export default Child2;
