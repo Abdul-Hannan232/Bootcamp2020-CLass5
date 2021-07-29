@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Context } from './CreateContext';
-import { Child1 } from './child1';
-import { Child2 } from './child2';
+import Child1 from './child1';
+import Child2 from './child2';
 import './App.css';
 
 
