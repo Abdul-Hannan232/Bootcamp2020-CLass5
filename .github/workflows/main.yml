@@ -1,0 +1,39 @@
+name: Bootcamp2020-CLass5
+
+on:
+
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+
+    steps:
+
+      - uses: actions/checkout@v2
+
+
+      - name: Install NodeJS
+        uses: actions/setup-node@v2-beta
+        with:
+          version: 14
+
+
+      - name: Install Dependencies
+        run: npm install
+        
+      - name: Create Build
+        run: npm run install
+        
+      - name: Install Surge
+        run: npm install -g surge
+        
+      - name: Deploy on Surge
+        run: surge ./build http://boot_class5.surge.sh/ --token ${{ secrets.SURGE_TOEKN5 }}
